@@ -55,7 +55,7 @@ class Queue
 end
 
 if $__FILE__ == $PROGRAM_NAME
-  queue = Queue.class
+  queue = Queue.new
   queue.enqueue(1)
   queue.enqueue(2)
   p queue.show
