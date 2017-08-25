@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  attr_reader :password
-
   validates :username, presence: true
   validates :password_digest, presence: { message: 'Password cannot be blank' }
   validates :password, length: { minimum: 6, allow_nil: true }
@@ -31,8 +29,6 @@ class User < ApplicationRecord
     return nil if user.nil?
     user.is_password?(password) ? user : nil
   end
-
-  private
 
   def ensure_session_token
     # need to use lazy operator or we will be reassigning every time,
