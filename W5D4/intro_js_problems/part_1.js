@@ -1,4 +1,7 @@
-// Phase 1
+// Intro to JS Homework
+
+// Phase I
+// mystery scoping
 
 function mysteryScoping1() {
   var x = 'out of block';
@@ -56,31 +59,35 @@ mysteryScoping4(); // in block, out of block
 //
 // mysteryScoping5(); // SyntaxError
 
+// madLib
 
-// Write a function that takes three strings - a verb, an adjective, and
-// a noun - uppercases and interpolates them into the sentence "We shall
-// VERB the ADJECTIVE NOUN". Use ES6 template literals.
-function madLib(verb, adjective, noun) {
-  return `We shall ${verb.toUpperCase()} the ${adjective.toUpperCase()} ${noun.toUpperCase()}`;
+function madLib(verb, adj, noun) {
+  return `We shall ${verb.toUpperCase()} the ${adj.toUpperCase()} ${noun.toUpperCase()}.`
 }
 
+// isSubstring
 
-// isSubString
-function isSubstring(string, substring) {
-  return string.includes(substring);
+function isSubstring(phrase, subphrase) {
+  return phrase.includes(subphrase);
 }
 
-function fizzBuzz(array) {
-  const fizzBuzzed = [];
+// Phase II
 
-  array.forEach( el => {
-    if ((el % 3 === 0) && (el % 5 === 0)) {
-      fizzBuzzed.push(el);
+// fizzBuzz
+
+function fizzBuzz (array) {
+  const fizzBuzzArr = [];
+
+  array.forEach(el => {
+    if ((el % 3 === 0) ^ (el % 5 === 0)) {
+      fizzBuzzArr.push(el);
     }
-  })
+  });
 
-  return fizzBuzzed;
+  return fizzBuzzArr;
 }
+
+// isPrime
 
 function isPrime (n) {
   if (n < 2) { return false; }
@@ -94,11 +101,13 @@ function isPrime (n) {
   return true;
 }
 
+// sumOfNPrimes
+
 function sumOfNPrimes (n) {
   let sum = 0;
   let countPrimes = 0;
-  let i = 2;
 
+  let i = 2;
   while (countPrimes < n) {
     if (isPrime(i)) {
       sum += i;
