@@ -20,7 +20,7 @@ class Calculator extends React.Component {
 
   setNum2(event) {
     event.preventDefault();
-    this.setState({ num1: parseInt(event.target.value) });
+    this.setState({ num2: parseInt(event.target.value) });
   }
 
   add(event) {
@@ -53,8 +53,8 @@ class Calculator extends React.Component {
 
   clear(event) {
     event.preventDefault();
-    let [num1, num2, result] = ["", "", 0];
-    this.setState({ num1, num2, result });
+    // let [num1, num2, result] = ["", "", 0];
+    this.setState({ num1: "", num2: "", result: 0 });
   }
 
 

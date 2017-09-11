@@ -22449,7 +22449,7 @@ var Calculator = function (_React$Component) {
     key: "setNum2",
     value: function setNum2(event) {
       event.preventDefault();
-      this.setState({ num1: parseInt(event.target.value) });
+      this.setState({ num2: parseInt(event.target.value) });
     }
   }, {
     key: "add",
@@ -22487,11 +22487,8 @@ var Calculator = function (_React$Component) {
     key: "clear",
     value: function clear(event) {
       event.preventDefault();
-      var num1 = "",
-          num2 = "",
-          result = 0;
-
-      this.setState({ num1: num1, num2: num2, result: result });
+      // let [num1, num2, result] = ["", "", 0];
+      this.setState({ num1: "", num2: "", result: 0 });
     }
   }, {
     key: "render",

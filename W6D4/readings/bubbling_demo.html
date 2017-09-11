@@ -1,0 +1,16 @@
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+      I am in the innermost div!
+    </div>
+  </div>
+</div>
+
+<script>
+const outerDiv = document.querySelector(".outer");
+outerDiv.addEventListener("click", function(e) {
+  alert("CLICKED!");
+  console.log("event.target:", e.target); // the inner div
+  console.log("event.currentTarget:", e.currentTarget); // the outer div
+});
+</script>
